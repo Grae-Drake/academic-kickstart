@@ -45,7 +45,7 @@ Most of the people who _would have_ done a bootcamp instead of law school couldn
 
 Tuition at DBC was I think like $12k. That's a tiny fraction of the cost of my JD. Still, with my student debt and monthly loan payments we didn't have the reserves or cashflow for that. So what could I do?
 
-Casting about the web for low cost options I ran into Hacker School (now Recurse Center). Seemed like a cool opportunity. Price was right. But I wasn't qualified yet. I knew I didn't have anywhere near enough programming experience to apply, but how much _was_ enough? I checked [their FAQ](https://web.archive.org/web/20130115173024/https://www.hackerschool.com/faq) and that's where I found it:
+Casting about the web for low cost options I ran into Hacker School (now [Recurse Center](https://www.recurse.com/)). Seemed like a cool opportunity. Price was right. But I wasn't qualified yet. I knew I didn't have anywhere near enough programming experience to apply, but how much _was_ enough? I checked [their FAQ](https://web.archive.org/web/20130115173024/https://www.hackerschool.com/faq) and that's where I found it:
 
 > **How much programming experience do I need for Hacker School?**
 >
@@ -53,7 +53,7 @@ Casting about the web for low cost options I ran into Hacker School (now Recurse
 
 Huh. Project Euler. What's that? *Click*
 
-I got hooked right away. Bad. Being newly unemployed I spent my spring at The Wormhole drinking coffee and teaching myself Python by solving Project Euler problems. They scratched an itch I forgot I had. They were frustrating and impossible and clever and solving one felt _amazing_. That silly green checkmark became the best part of my day.
+I got hooked right away. Hooked bad. Being newly unemployed I spent my spring at The Wormhole drinking coffee and teaching myself Python by solving Project Euler problems. They scratched an itch I forgot I had. They were frustrating and impossible and clever and solving one felt _amazing_. That silly green checkmark became the best part of my day.
 
 {{< figure library="true" src="green_check.png" caption="You're good enough, you're smart enough, and doggone it, people like you!" lightbox="false" >}}
 
@@ -61,6 +61,6 @@ By the time I interviewed at Thinkful I'd solved about 80 problems, averaging a 
 
 Project Euler had a big impact on my work and my life. It made me excited to write code. It gave me the motivation to keep beating my head against the wall while I was learning. It lent me credibility during my interviews and helped me join Thinkful, where I successfully pivoted into tech and got paid to help others do the same. It drilled me, without me realizing, in data structures and algorithmic complexity before I knew what those were. And it reminded me how much I love math.
 
-So I want to talk about it here. I've held off on sharing my solutions or analysis because, well, Project Euler asked me not to. But I see they now let people talk about the first hundred problems. So let's dive in and see how many of those we can cover.
+So I want to talk about it here. I've held off on sharing my solutions or analysis because, well, Project Euler asked me not to. But now they let people talk about the first hundred problems. So let's dive in and see how many of those we can cover.
 
 {{< figure library="true" src="lets_go.gif" width="75%" lightbox="false" >}}
