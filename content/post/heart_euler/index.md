@@ -4,7 +4,7 @@
 title: "❤️ Project Euler"
 subtitle: ""
 summary: ""
-authors: [Grae]
+authors: [grae]
 tags: [Euler]
 categories: []
 date: 2020-05-21T23:54:43-07:00
