@@ -20,19 +20,19 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: I build mission-driven products, teams, and companies.
 
-interests:
-- Education
-- Programming
-- Snowboarding
+# interests:
+# - Education
+# - Programming
+# - Snowboarding
 
-education:
-  courses:
-  - course: Juris Doctor
-    institution: University of Illinois
-    year: 2011
-  - course: Liberal Arts
-    institution: St. John's College
-    year: 2009
+# education:
+#   courses:
+#   - course: Juris Doctor
+#     institution: University of Illinois
+#     year: 2011
+#   - course: Liberal Arts
+#     institution: St. John's College
+#     year: 2009
 
 
 # Social/Academic Networking
@@ -68,4 +68,12 @@ email: ""
 # - Visitors
 ---
 
-BIO TODO
+I'm working to scale one-to-one learning.
+
+In 1984 Benjamin Bloom described the "[Two Sigma Problem](https://en.wikipedia.org/wiki/Bloom%27s_2_sigma_problem)", noting that students tutored with one-to-one techniques performed **two standard deviations better** than students in a traditional class.
+
+He also dismissed large-scale one-to-one learning as "**too costly**" and **not "realistic**".
+
+I believe Bloom was right about the effectiveness of one-to-one learning, but wrong about scalability. I'm building tools to prove that **scalable, accessible one-to-one learning is possible today**.
+
+
