@@ -3,7 +3,7 @@
 
 title: "❤️ Project Euler"
 subtitle: ""
-summary: ""
+summary: "How I found Project Euler and pivoted into tech"
 authors: [grae]
 tags: [Euler]
 categories: []
