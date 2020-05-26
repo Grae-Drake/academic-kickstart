@@ -28,7 +28,7 @@ image:
 projects: []
 ---
 
-Our first, and certainly not our last, encounter with the Fibonacci Sequence on Project Euler. Before we dive into Problem 2 together take some time to chew on it yourself if you haven't already. Did you find a solution? If so have you been able to improve or streamline your first one? If not do can you clearly describe to yourself what you're stuck on?
+Our first, and certainly not our last, encounter with the Fibonacci Sequence on Project Euler. Before we dive into Problem 2 together take some time to chew on it yourself if you haven't already. Did you find a solution? If so have you been able to improve or streamline your first one? If not can you clearly describe to yourself what you're stuck on?
 
 {{< figure library="true" src="Leonardo_Fibonacci.jpeg" caption="Modern mathematicians just aren't this _imposing_. Image: <a href='https://commons.wikimedia.org/wiki/File:Leonardo_da_Pisa.jpg#/media/File:Leonardo_Fibonacci.JPG'>Wikipedia</a>" lightbox="false" >}}
 
