@@ -136,15 +136,15 @@ print(result)
 It's always nice when a more optimal algorithm _also_ makes for less code. However, we've lost some clarity compared to our previous solutions. It's not clear from the code itself where the hard-coded **magic numbers** `2`, `8`, and `10` are coming from. [Magic numbers](https://en.wikipedia.org/wiki/Magic_number_(programming)#Unnamed_numerical_constants) aren't self-explanatory in the way named variables are and they can make a program harder to understand and maintain. That's why I added a comment at the top: I did't think the code alone made it obvious enough to you what it was doing.
 
 ## A Golden Solution
-Let's get _real_ funky with it. Is there a way to calculate each term directly from the single term before it? For example, how could we look at `34` and calculate `55` without knowing or caring that the previous term was 21?
+Let's get _real_ funky with it. Is there a way to calculate each term directly from the single term before it? For example, how could we look at $ 34 $ and calculate $ 55 $ without knowing or caring that the previous term was 21?
 
 Our buddy Fibonacci discovered way back in 1202 that the ratio between successive terms in the fibonacci sequence converges on $ \phi $, the **golden ratio**. So if you take $ F\_n $ and multiply it by $ \phi $ you get alllllmost $ F\_{n+1} $. Using the example above you get:
 
 $$ 34 * \phi = 55.0131556175... $$
 
-That's _super_ close to the right answer: `55`.
+That's _super_ close to the right answer: $ 55 $.
 
-Multiply by $ \phi $ again and you get ~ `89`, and multiply by $ \phi $ one last time to get ~`144`. Each time we multiply by $ \phi $ we step to the next fibonacci number. We can take three steps at once by multiplying by $ \phi^3 $. More formally:
+Multiply by $ \phi $ again and you get $ \approx{89} $, and multiply by $ \phi $ one last time to get $ \approx{144} $. Each time we multiply by $ \phi $ we step to the next fibonacci number. We can take three steps at once by multiplying by $ \phi^3 $. More formally:
 
 $$ F\_{n+3} \approx F\_{n} * \phi^3 $$
 
@@ -168,14 +168,16 @@ print(result)
 Now ain't that a shiny solution.
 
 
-## Almost (But Not Quite) an Analytic Solution
-This is a nice solution but it still relies on a `while` loop to calculate items one by one. I can almost, but not _quite_ get to a direct calculation. The approximation, which was small enough between terms to round away, compounds in the approach I tried and is about 5% away from the right answer. If you see something I'm missing or know how to solve this _please let me know_!. Here's my not-quite-right stab at direct calculation.
+## Analytic Approximation (not Solution)
+This is a nice solution but it still relies on a `while` loop to calculate items one by one. I can almost, but not _quite_ get to a direct calculation. The approximation of $ \phi $, which was small enough between terms to round away in the solution above, compounds in this stab at an analytic solution and so only gives an approximation.
+
+For the specific problem inputs this gives a result about 5% off from the true answer. Here's my approximation.
 
 If we ignore rounding for now, we can write out the sequence of terms we generate above like this:
 
 $$ 2,\\: 2\phi^3,\\: 2\phi^6,\\: 2\phi^9,\\: 2\phi^{12},\\: ... $$
 
-If you squint real hard, you can see that's a [geometric series](https://en.wikipedia.org/wiki/Geometric_series). It's easier to see if we have a symbol for $ \phi^3 $. Let's use $ r $:
+If you squint real hard, you can see that's a [geometric series](https://en.wikipedia.org/wiki/Geometric_series). It's easier to see if we replace $ \phi^3 $ with the symbol $ r $:
 
 $$ 2r^0,\\: 2r^1,\\: 2r^2,\\: 2r^3,\\: 2r^4,\\: ... $$
 
@@ -183,11 +185,11 @@ where $ r = \phi^3 \approx{4.2360679775} $
 
 Since this is a geometric series we can use the [formula](https://en.wikipedia.org/wiki/Geometric_progression#Geometric_series) for the sum of the first $ n $ terms of a geometric series:
 
-$$ a(1-r^n)/{1 - r}  $$
+$$ Geometric{\ }Sum = \frac{a(1-r^n)}{1 - r} $$
 
-Where $ a $ is the start term (in our case: `2`), $ r $ is the ratio between terms (in our case $ \phi^3 $ or about `4.2360679775`), and $ n $ is the number of terms.
+Where $ a $ is the start term (in our case: $ 2 $), $ r $ is the ratio between terms (in our case $ \phi^3 $ or about $ 4.2360679775 $), and $ n $ is the number of terms.
 
-All we're missing now is $ n $. We can get that by taking the log base $ r $ of our limit (spoiler: it's `11`). Let's code it up:
+All we're missing now is $ n $. We can get that by taking the log base $ r $ of our limit (spoiler: it's $ 11 $). Let's code it up:
 
 ```python
 import math
@@ -198,4 +200,6 @@ n = 11
 print((a * (1 - r ** n)) / (1 - r))
 ```
 
-Unfortunately the approximations, which were small enough to ignore last time, are now compounding. This attempt overshoots the right answer by about 5%. If you see something I'm overlooking please reach out and let me know!
+Unfortunately the approximations, which were small enough to ignore last time, are now compounding. This attempt overshoots the right answer by about 5%.
+
+I don't know whether there's a way to improve the accuracy of this approach or if there's a way to tweak it to sidestep the approximation issues. If you see something I'm overlooking please reach out and let me know!

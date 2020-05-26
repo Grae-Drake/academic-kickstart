@@ -73,7 +73,7 @@ def largest_prime_factor(n):
 
 Now we can easily run that code with multiple inputs:
 
-```python
+```python-repl
 >>> largest_prime_factor(13195)
 29
 >>> largest_prime_factor(21952)
@@ -98,13 +98,13 @@ def timed (n):
 
 Now we can see how fast the code is running:
 
-```python
+```python-repl
 >>> timed(13195)
-Largest prime factor of 13195 is 29. Execution: 0.018383000000000038 seconds
+"Largest prime factor of 13195 is 29. Execution: 0.018383000000000038 seconds"
 >>> timed(21952)
-Largest prime factor of 21952 is 7. Execution: 0.026741000000015447 seconds
+"Largest prime factor of 21952 is 7. Execution: 0.026741000000015447 seconds"
 >>> timed(98989)
-Largest prime factor of 98989 is 8999. Execution: 0.13390699999999356 seconds
+"Largest prime factor of 98989 is 8999. Execution: 0.13390699999999356 seconds"
 ```
 
 Of course, all these numbers are specific to my computer and setup. They'll fluctuate a little each time I run the code, and they'll also change depending on what else my computer is doing and several other factors. So if you run this you'll get different numbers. That's ok. The point is that I can easily see how _execution time increases as I increase the size of the input_.
@@ -113,19 +113,18 @@ That last part is important and bears repeating. _Execution time increases as I 
 
 Let's start adding zeros to our input and see what happens:
 
-```python
+```python-repl
 >>> timed(10000)
-Largest prime factor of 10000 is 5. Execution: 0.01425699999998642 seconds
+"Largest prime factor of 10000 is 5. Execution: 0.01425699999998642 seconds"
 >>> timed(100000)
-Largest prime factor of 100000 is 5. Execution: 0.13481099999998492 seconds
+"Largest prime factor of 100000 is 5. Execution: 0.13481099999998492 seconds"
 >>> timed(1000000)
-Largest prime factor of 1000000 is 5. Execution: 2.938510000000008 seconds
+"Largest prime factor of 1000000 is 5. Execution: 2.938510000000008 seconds"
 >>> timed(10000000)
-Largest prime factor of 10000000 is 5. Execution: 74.51557199999999 seconds
->>> 
+"Largest prime factor of 10000000 is 5. Execution: 74.51557199999999 seconds"
 ```
 
-Uuuugh, that last one was a pain to wait for. And the rules of Project Euler say that solutions should run in a minute or less so that's no good. Every time we add a zero to our input the code takes at least 10 times longer to run. The input we need to solve for, `600851475143`, has 4 more digits than the number that took 74 seconds to solve. Back of the napkin, running our program on it will take something like $ 74 *  10^4 = 740{,}000 $ seconds to run. That's 8 or 9 days. No good.
+Uuuugh, that last one was a pain to wait for. And the rules of Project Euler say that solutions should run in a minute or less so that's no good. Every time we add a zero to our input the code takes at least 10 times longer to run. The input we need to solve for, `600851475143`, has 4 more digits than the number that took 74 seconds to solve. Back of the napkin, running our program on it will take something like $ 74 * 10^4 = 740{,}000 $ seconds to run. That's 8 or 9 days. No good.
 
 
 ## Correct isn't Good Enough
@@ -162,7 +161,7 @@ As one factor gets larger it's "pair" factor gets smaller and smaller. Until the
 
 We can use this to improve our solution. Instead of looping every number below `600851475143` to find factors we can just loop over every integer below its square root: about `775146`. That's... _a lot_ fewer loops. In code:
 
-```
+```python
 import math
 def largest_prime_factor(n):
     factors = []
@@ -178,23 +177,23 @@ def largest_prime_factor(n):
 
 Ok, let's check against our test input to see if it works:
 
-```python
+```python-repl
 >>> largest_prime_factor(13195)
 29
 ```
 
 Yep, still works. How fast?
 
-```python
+```python-repl
 >>> timed(13195)
-Largest prime factor of 13195 is 29. Execution: 0.0001859999999851425 seconds
+"Largest prime factor of 13195 is 29. Execution: 0.0001859999999851425 seconds"
 ```
 
 Hey, that's _a lot_ faster than our naive solution. Is this good enough?
 
-```python
+```python-repl
 >>> timed(600851475143)
-Largest prime factor of 600851475143 is [censored]. Execution: 2.0993389999999863 seconds
+"Largest prime factor of 600851475143 is [censored]. Execution: 2.0993389999999863 seconds"
 ```
 
 Woohoo!
@@ -223,5 +222,4 @@ def is_prime(n):
             return False
     return True
 ```
-
 And there we go: we have an `is_prime()` function good enough to solve this problem. Are there ways to improve it? Yes, and we might look into that later if needed for harder problems, but in the spirit of pragmatism we'll stick with this straightforward solution for as long as it does what we need it to do.
