@@ -114,11 +114,11 @@ Is there a way to calculate _only_ the 3rd, 6th, 9th, etc. items so we don't was
 
 I won't run through the steps here, but you can start with the fibonacci series definition:
 
-$$ F\_{n} = {\color{red}F\_{n-2}} + \color{blue}F\_{n-1} $$
+$$ F\_{n} = {\color{#FF007F}F\_{n-2}} + \color{#0072BB}F\_{n-1} $$
 
 where $ F\_{n} $ is the nth term in the sequence, and algebraically derive the equation:
 
-$$ F\_{n} = {\color{red}F\_{n-6}} + {\color{blue}F\_{n-3}} + {\color{green}(3 * F\_{n-3})} $$
+$$ F\_{n} = {\color{#FF007F}F\_{n-6}} + {\color{#0072BB}F\_{n-3}} + {\color{#177245}(3 * F\_{n-3})} $$
 
 So normally to get the next term we add the previous two terms. For the next _even_ term we add the previous two _even_ terms, and then add the previous even term three more times. In code:
 
