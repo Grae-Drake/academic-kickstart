@@ -37,7 +37,7 @@ As always, spend some time with [the problem](https://projecteuler.net/problem=6
 
 ## Brute Forcing it
 
-All the numbers involved in this problem are small to quickly calculate:
+All the numbers involved in this problem are small enough to quickly calculate:
 
 ```python
 limit = 100
@@ -53,7 +53,7 @@ You _could_ get clever and jam all that into one line, but it'd be less readable
 print(sum(range(1, 101)) ** 2 - sum([x ** 2 for x in range(1, 101)]))
 ```
 
-I feel the temptation to get clever like that a lot. I've learned that I'm usually better off down the line if I avoid that temptation.
+I feel the temptation to get clever like that a lot. I've learned future me is usually better off if I avoid that temptation.
 
 ## The Efficient Solution
 
