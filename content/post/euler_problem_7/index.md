@@ -10,7 +10,7 @@ categories: []
 date: 2020-06-07T18:01:03-06:00
 lastmod: 2020-06-07T18:01:03-06:00
 featured: false
-draft: false
+draft: true
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -64,7 +64,7 @@ def is_prime(n):
 
 This runs a _lot_ faster. It finds the 10,001st prime in 0.37 seconds. But can we make it _even better_?
 
-[Perhaps the most rediscovered result about primes numbers] (https://primes.utm.edu/notes/faq/six.html) is the fact that every prime bigger than 3 is "next" to a multiple of 6. That is, every prime number is either 1 greater than or 1 less than 6 * k for some k. Using that property we can skip the 2/3rds of the integers. In code:
+[Perhaps the most rediscovered result about primes numbers](https://primes.utm.edu/notes/faq/six.html) is the fact that every prime bigger than 3 is "next" to a multiple of 6. That is, every prime number is either 1 greater than or 1 less than 6 * k for some k. Using that property we can skip the 2/3rds of the integers. In code:
 
 ```python
 def is_prime(n):
