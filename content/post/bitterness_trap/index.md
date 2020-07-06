@@ -28,7 +28,7 @@ image:
 projects: []
 ---
 
-I got my start in computing early because my dad was disabled. He had a degenerative nerve disease and at some point, maybe when I was five or six, my clumsy little kid hands got better at wrangling computer parts than his own traitorous hands. You see side hustle in the eighties was buying OEM computer parts, building computers, and selling those machines to consumers. This was before closed-body devices made it the norm not to tinker with your hardware, before Newegg made it easy to buy OEM, and even before Gateway started selling fully-assembled PCs direct to consumer.
+I got my start in computing early because my dad was disabled. He had a degenerative nerve disease and at some point, maybe when I was five or six, my clumsy little kid hands got better at wrangling computer parts than his own traitorous hands. You see his side hustle in the eighties was buying OEM computer parts, building computers, and selling those machines to consumers. This was before closed-body devices made it the norm not to tinker with your hardware, before Newegg made it easy to buy OEM, and even before Gateway started selling fully-assembled PCs direct to consumer.
 
 {{< figure library="true" src="gateway_box.jpg" caption="This box contained pure, unadulterated excitement" lightbox="false" >}}
 
